@@ -20,6 +20,6 @@ for f in ./audiobooks/*.aav; do
    title="${title//[ ,.:-]/_}"
    title="${title//\'/}"
    title="${title//+(_)/_}"
-   title="cracked/$title.m4b"
+   title="converted/$title.m4b"
    ffmpeg -y -activation_bytes $ab -i $f -map_metadata 0 -id3v2_version 3 -codec:a copy -vn "$title"
 done

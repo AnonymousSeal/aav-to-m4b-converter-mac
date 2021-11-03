@@ -21,5 +21,5 @@ for f in ./audiobooks/*.aav; do
    title="${title//\'/}"
    title="${title//+(_)/_}"
    title="converted/$title.m4b"
-   ffmpeg -y -activation_bytes $ab -i $f -map_metadata 0 -id3v2_version 3 -codec:a copy -vn "$title"
+   ffmpeg -y -activation_bytes $activation_bytes -i $f -map_metadata 0 -c:v copy -disposition:v:0 attached_pic -id3v2_version 3 -codec:a copy $title
 done

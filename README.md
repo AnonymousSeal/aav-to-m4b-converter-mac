@@ -14,7 +14,7 @@ Put the audiobooks into the ```audiobooks/``` folder.
 
 Now you need to figure out the activation bytes associated with your audible account. [Audible Converter](https://audible-converter.ml/) is a good tool to do this, just upload one of the audiobook files and the website will give you the activation bytes.
 
-Now you need to open the ```converter.sh``` file and towards the top, there is a variable called _activation_bytes_ which is set to an empty string. Put the activation bytes into this string and now you should be able to run the file by executing the command:
+Open the ```converter.sh``` file and towards the top, there is a variable called _activation_bytes_ which is set to an empty string. Put the activation bytes into this string. After that you should be able to run the file by executing the command:
 
 ```$ bash converter.sh```
 

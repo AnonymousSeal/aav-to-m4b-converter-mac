@@ -2,7 +2,6 @@
 
 shopt -s extglob
 
-path='./audiobooks'
 activation_bytes=''
 
 if ["$activation_bytes" = '']
@@ -17,7 +16,7 @@ function obtain_name(){
     exiftool $1 | egrep "^Short Title" | cut -c 35-
 }
 
-for f in "$path/*.aav"; do
+for f in ./audiobooks/*.aav; do
    title="$(obtain_name $f)"
    title="${title//[ ,.:-]/_}"
    title="${title//\'/}"
